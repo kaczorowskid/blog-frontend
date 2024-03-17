@@ -1,4 +1,4 @@
-import { Article } from '../../features';
+import { Article } from 'features';
 import { BlogArticlePreview, LatestArticle } from './components';
 import { useControlView, useGetArticles } from './ArticleList.hooks';
 

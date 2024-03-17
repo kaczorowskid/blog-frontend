@@ -1,4 +1,4 @@
-import { Main } from 'layouts';
+import { Error, Main } from 'layouts';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -6,7 +6,7 @@ import {
   RouterProvider
 } from 'react-router-dom';
 import { routesUrls } from './routesUrls';
-import { ArticlePreview, ArticlesList } from 'views';
+import { ArticlePreview, ArticlesList, Error404 } from 'views';
 
 export const Routes = (): JSX.Element => {
   const router = createBrowserRouter(
@@ -15,6 +15,9 @@ export const Routes = (): JSX.Element => {
         <Route element={<Main />}>
           <Route path={routesUrls.base} element={<ArticlesList />} />
           <Route path={routesUrls.article} element={<ArticlePreview />} />
+        </Route>
+        <Route element={<Error />}>
+          <Route path='*' element={<Error404 />} />
         </Route>
       </Route>
     )
