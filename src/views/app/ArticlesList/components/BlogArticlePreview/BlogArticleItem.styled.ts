@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   min-height: 175px;
-  padding: 32px 16px;
+  padding: 32px 0px;
   border-bottom: 32px;
   border: 1px solid #1e1e20;
   border-left: none;
