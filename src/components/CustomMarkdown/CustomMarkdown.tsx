@@ -14,7 +14,7 @@ export const MarkdownComponent = ({ children, ...props }: Options) => (
           <SyntaxHighlighter
             showLineNumbers
             children={String(children)}
-            language='jsx'
+            language='javascript'
             style={vscDarkPlus}
           />
         );
