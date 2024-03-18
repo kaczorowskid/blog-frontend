@@ -54,18 +54,16 @@ export const BlogArticleItem = ({
           />
         </ExpandableContainer>
       </AnimatePresence>
-      {isExpand && (
-        <AnimatePresence initial={false}>
-          <ExpandableSection
-            variants={expandableSectionVariants}
-            transition={transition}
-            initial='close'
-            animate={isExpand ? 'open' : 'close'}
-          >
-            {children}
-          </ExpandableSection>
-        </AnimatePresence>
-      )}
+      <AnimatePresence initial={false}>
+        <ExpandableSection
+          variants={expandableSectionVariants}
+          transition={transition}
+          initial='close'
+          animate={isExpand ? 'open' : 'close'}
+        >
+          {children}
+        </ExpandableSection>
+      </AnimatePresence>
     </Wrapper>
   );
 };
