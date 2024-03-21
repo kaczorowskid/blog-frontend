@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
 import { QueryClientProvider } from '@tanstack/react-query';
-import { isEmptyString, queryClient } from 'utils';
+import ReactDOM from 'react-dom/client';
 import { Routes } from 'routes';
+import { isEmptyString, queryClient } from 'utils';
+import './index.css';
 
 if (
   isEmptyString(process.env.VITE_DEV_API_URL) ||

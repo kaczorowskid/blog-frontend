@@ -1,12 +1,12 @@
-import { Error, Main } from 'layouts';
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider
 } from 'react-router-dom';
-import { routesUrls } from './routesUrls';
+import { Error, Main } from 'layouts';
 import { ArticlePreview, ArticlesList, Error404 } from 'views';
+import { routesUrls } from './routesUrls';
 
 export const Routes = (): JSX.Element => {
   const router = createBrowserRouter(

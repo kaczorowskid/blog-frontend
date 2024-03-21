@@ -1,8 +1,8 @@
 import ReactMarkdown, { Options } from 'react-markdown';
+import Zoom from 'react-medium-image-zoom';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import rehypeRaw from 'rehype-raw';
-import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 
 export const MarkdownComponent = ({ children, ...props }: Options) => (

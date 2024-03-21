@@ -1,3 +1,6 @@
+import { useNavigate } from 'react-router-dom';
+import { Tag } from 'components';
+import { formatDate } from 'utils';
 import {
   Date,
   Description,
@@ -7,10 +10,7 @@ import {
   OverlayContent,
   Title
 } from './LatestArticle.styled';
-import { Tag } from 'components';
 import { LatestArticleProps } from './LatestAtricle.types';
-import { useNavigate } from 'react-router-dom';
-import { formatDate } from 'utils';
 
 export const LatestArticle = ({ data }: LatestArticleProps) => {
   const { _id: id, date, description, thumbnail, title, tag } = data ?? {};

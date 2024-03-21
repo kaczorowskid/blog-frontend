@@ -1,8 +1,8 @@
 import { Outlet, useNavigate } from 'react-router-dom';
-import { Conatiner } from './Main.styled';
-import { Footer, Header } from 'components';
 import logo from 'assets/logo.svg';
+import { Footer, Header } from 'components';
 import { routesUrls } from 'routes';
+import { Conatiner } from './Main.styled';
 
 export const Main = () => {
   const navigate = useNavigate();

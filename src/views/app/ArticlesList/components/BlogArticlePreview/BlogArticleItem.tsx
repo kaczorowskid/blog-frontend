@@ -1,3 +1,6 @@
+import { Tag } from 'components';
+import { AnimatePresence } from 'framer-motion';
+import { formatDate } from 'utils';
 import {
   Date,
   Description,
@@ -7,11 +10,8 @@ import {
   Title,
   Wrapper
 } from './BlogArticleItem.styled';
-import { AnimatePresence } from 'framer-motion';
-import { container, image, section } from './animation.variants';
 import { BlogArticleItemProps } from './BlogArticleItem.types';
-import { Tag } from 'components';
-import { formatDate } from 'utils';
+import { container, image, section } from './animation.variants';
 
 export const BlogArticleItem = ({
   item: { date, description, _id: id, thumbnail, title, tag },

@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { GetArticleResponse, getArticles } from 'api';
-import { useNavigate } from 'react-router-dom';
 
 type UseControlView = {
   articleId: string;
