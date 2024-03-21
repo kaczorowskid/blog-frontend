@@ -8,11 +8,17 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', 'perfectionist'],
+  plugins: ['react-refresh', '@typescript-eslint', 'perfectionist'],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
+    ],
+    '@typescript-eslint/explicit-function-return-type':[
+      'error',
+      {
+        allowExpressions: true
+      }
     ],
     "perfectionist/sort-imports": [
       "error",

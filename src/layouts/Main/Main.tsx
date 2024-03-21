@@ -4,7 +4,7 @@ import { Footer, Header } from 'components';
 import { routesUrls } from 'routes';
 import { Conatiner } from './Main.styled';
 
-export const Main = () => {
+export const Main = (): JSX.Element => {
   const navigate = useNavigate();
 
   return (

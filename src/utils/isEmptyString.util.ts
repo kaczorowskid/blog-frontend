@@ -1,3 +1,3 @@
-export const isEmptyString = (data: string | undefined) => {
+export const isEmptyString = (data: string | undefined): boolean => {
   return !data || data === '';
 };

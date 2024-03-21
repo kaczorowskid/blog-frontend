@@ -9,7 +9,11 @@ import {
 } from './Article.styled';
 import { ArticleProps } from './Article.types';
 
-export const Article = ({ id, isPreviewMode, onGoToArticle }: ArticleProps) => {
+export const Article = ({
+  id,
+  isPreviewMode,
+  onGoToArticle
+}: ArticleProps): JSX.Element => {
   const { data } = useGetArticle(id);
 
   return (

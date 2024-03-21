@@ -18,7 +18,7 @@ export const useControlView = (): UseControlView => {
   const [articleId, setArticleId] = useState<string>('');
   const navigate = useNavigate();
 
-  const handleGoToArticle = (id: string) => {
+  const handleGoToArticle = (id: string): void => {
     navigate(`article/${id}`);
   };
 

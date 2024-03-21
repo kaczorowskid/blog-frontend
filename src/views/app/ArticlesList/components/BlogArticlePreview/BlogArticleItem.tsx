@@ -18,10 +18,10 @@ export const BlogArticleItem = ({
   articleId,
   setArticleId,
   children
-}: BlogArticleItemProps) => {
+}: BlogArticleItemProps): JSX.Element => {
   const isExpand = articleId === id;
 
-  const handleExpand = () => {
+  const handleExpand = (): void => {
     !isExpand && setArticleId(id);
   };
 

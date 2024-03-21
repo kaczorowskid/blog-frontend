@@ -5,7 +5,10 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import rehypeRaw from 'rehype-raw';
 import 'react-medium-image-zoom/dist/styles.css';
 
-export const MarkdownComponent = ({ children, ...props }: Options) => (
+export const MarkdownComponent = ({
+  children,
+  ...props
+}: Options): JSX.Element => (
   <ReactMarkdown
     rehypePlugins={[rehypeRaw]}
     components={{

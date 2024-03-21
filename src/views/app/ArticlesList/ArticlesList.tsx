@@ -2,7 +2,7 @@ import { Article } from 'features';
 import { useControlView, useGetArticles } from './ArticleList.hooks';
 import { BlogArticlePreview, LatestArticle } from './components';
 
-export const ArticlesList = () => {
+export const ArticlesList = (): JSX.Element => {
   const { articleId, setArticleId, handleGoToArticle } = useControlView();
   const { firstArticleData, restArticlesData } = useGetArticles();
 

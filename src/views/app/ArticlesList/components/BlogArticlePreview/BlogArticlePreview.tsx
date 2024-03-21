@@ -6,7 +6,7 @@ export const BlogArticlePreview = ({
   articleId,
   setArticleId,
   article
-}: BlogArticlePreviewProps) => {
+}: BlogArticlePreviewProps): JSX.Element => {
   return (
     <>
       {data?.map((item) => (
