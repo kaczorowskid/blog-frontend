@@ -10,7 +10,7 @@ import {
   Title,
   Wrapper
 } from './BlogArticleItem.styled';
-import { BlogArticleItemProps } from './BlogArticleItem.types';
+import { type BlogArticleItemProps } from './BlogArticleItem.types';
 import { container, image, section } from './animation.variants';
 
 export const BlogArticleItem = ({

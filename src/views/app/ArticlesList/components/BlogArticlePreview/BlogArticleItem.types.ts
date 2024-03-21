@@ -1,5 +1,5 @@
-import { Dispatch, ReactNode, SetStateAction } from 'react';
-import { ArticleData } from 'types';
+import { type Dispatch, type ReactNode, type SetStateAction } from 'react';
+import { type ArticleData } from 'types';
 
 type BlogArticleCommonProps = {
   articleId: string;

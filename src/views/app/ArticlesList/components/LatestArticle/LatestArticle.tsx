@@ -10,7 +10,7 @@ import {
   OverlayContent,
   Title
 } from './LatestArticle.styled';
-import { LatestArticleProps } from './LatestAtricle.types';
+import { type LatestArticleProps } from './LatestAtricle.types';
 
 export const LatestArticle = ({ data }: LatestArticleProps): JSX.Element => {
   const { _id: id, date, description, thumbnail, title, tag } = data ?? {};

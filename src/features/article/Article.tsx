@@ -7,7 +7,7 @@ import {
   StyledButton,
   Wrapper
 } from './Article.styled';
-import { ArticleProps } from './Article.types';
+import { type ArticleProps } from './Article.types';
 
 export const Article = ({
   id,

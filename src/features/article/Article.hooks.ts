@@ -1,5 +1,5 @@
-import { UseQueryResult, useQuery } from '@tanstack/react-query';
-import { GetArticleResponse, getArticle } from 'api';
+import { type UseQueryResult, useQuery } from '@tanstack/react-query';
+import { type GetArticleResponse, getArticle } from 'api';
 
 export const useGetArticle = (
   id: string

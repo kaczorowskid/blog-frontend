@@ -1,4 +1,4 @@
-import { AnimationProps } from 'framer-motion';
+import { type AnimationProps } from 'framer-motion';
 
 const DURATION = 0.4;
 export const section = (isExpand: boolean): AnimationProps => ({

@@ -1,5 +1,5 @@
 import { BlogArticleItem } from './BlogArticleItem';
-import { BlogArticlePreviewProps } from './BlogArticleItem.types';
+import { type BlogArticlePreviewProps } from './BlogArticleItem.types';
 
 export const BlogArticlePreview = ({
   data,

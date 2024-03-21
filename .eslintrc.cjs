@@ -20,6 +20,14 @@ module.exports = {
         allowExpressions: true
       }
     ],
+        "@typescript-eslint/consistent-type-imports":[
+      'error',
+      {
+        prefer: 'type-imports',
+        fixStyle: 'inline-type-imports',
+        disallowTypeAnnotations: false
+      }
+    ],
     "perfectionist/sort-imports": [
       "error",
       {

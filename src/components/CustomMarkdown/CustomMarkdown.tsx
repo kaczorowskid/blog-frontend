@@ -1,4 +1,4 @@
-import ReactMarkdown, { Options } from 'react-markdown';
+import ReactMarkdown, { type Options } from 'react-markdown';
 import Zoom from 'react-medium-image-zoom';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';

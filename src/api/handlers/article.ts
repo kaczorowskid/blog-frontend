@@ -1,4 +1,4 @@
-import { GetArticleResponse, HttpMethod, apiCall, apiUrls } from 'api';
+import { type GetArticleResponse, HttpMethod, apiCall, apiUrls } from 'api';
 
 export const getArticles = async (): Promise<GetArticleResponse[]> => {
   const {
