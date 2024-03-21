@@ -3,7 +3,7 @@ import { BlogArticlePreview, LatestArticle } from './components';
 import { useControlView, useGetArticles } from './ArticleList.hooks';
 
 export const ArticlesList = () => {
-  const { articleId, setArticleId, closeArticle } = useControlView();
+  const { articleId, setArticleId, handleGoToArticle } = useControlView();
   const { firstArticleData, restArticlesData } = useGetArticles();
 
   return (
@@ -14,7 +14,11 @@ export const ArticlesList = () => {
         articleId={articleId}
         setArticleId={setArticleId}
         article={(id) => (
-          <Article isPreviewMode id={id} goBack={closeArticle} />
+          <Article
+            isPreviewMode
+            id={id}
+            onGoToArticle={() => handleGoToArticle(id)}
+          />
         )}
       />
     </>

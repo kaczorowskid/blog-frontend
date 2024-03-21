@@ -1,7 +1,18 @@
-import styled from 'styled-components';
+import styled, { CSSProperties } from 'styled-components';
 
-export const Button = styled.button`
+type ButtonProps = {
+  transparent?: boolean;
+  block?: boolean;
+  fontSize?: CSSProperties['fontSize'];
+};
+
+export const Button = styled.button<ButtonProps>`
   border: none;
   height: 48px;
-  width: 100%;
+  width: ${({ block }) => (block ? '100%' : 'auto')};
+  background-color: ${({ transparent }) =>
+    transparent ? 'transparent' : '#010104'};
+  color: ${({ transparent }) => (transparent ? '#010104' : '#eff0f3')};
+  font-size: ${({ fontSize }) => `${fontSize}px` || 'inital'};
+  cursor: pointer;
 `;

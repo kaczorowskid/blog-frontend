@@ -1,30 +1,44 @@
-export const expandableSectionVariants = {
-  open: {
-    height: 'auto'
-  },
-  close: {
-    height: 0
-  }
-};
+import { AnimationProps } from 'framer-motion';
 
-export const expandableContainerVariant = {
-  open: {
-    height: 'auto'
+const DURATION = 0.4;
+export const section = (isExpand: boolean): AnimationProps => ({
+  variants: {
+    open: {
+      height: 'auto'
+    },
+    close: {
+      height: 0
+    }
   },
-  close: {
-    height: 0
-  }
-};
+  transition: { duration: DURATION },
+  initial: 'close',
+  animate: isExpand ? 'open' : 'close'
+});
 
-export const imageVariant = {
-  open: {
-    height: '100%'
+export const container = (isExpand: boolean): AnimationProps => ({
+  variants: {
+    open: {
+      height: 'auto'
+    },
+    close: {
+      height: 0
+    }
   },
-  close: {
-    height: '0%'
-  }
-};
+  transition: { duration: DURATION },
+  initial: 'open',
+  animate: isExpand ? 'close' : 'open'
+});
 
-export const transition = {
-  duration: 0.4
-};
+export const image = (isExpand: boolean): AnimationProps => ({
+  variants: {
+    open: {
+      height: '100%'
+    },
+    close: {
+      height: '0%'
+    }
+  },
+  transition: { duration: DURATION },
+  initial: 'open',
+  animate: isExpand ? 'close' : 'open'
+});

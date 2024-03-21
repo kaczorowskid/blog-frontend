@@ -1,11 +1,12 @@
 import { Dispatch, SetStateAction, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { GetArticleResponse, getArticles } from 'api';
+import { useNavigate } from 'react-router-dom';
 
 type UseControlView = {
   articleId: string;
   setArticleId: Dispatch<SetStateAction<string>>;
-  closeArticle: () => void;
+  handleGoToArticle: (id: string) => void;
 };
 
 type UseGetArticles = {
@@ -15,15 +16,16 @@ type UseGetArticles = {
 
 export const useControlView = (): UseControlView => {
   const [articleId, setArticleId] = useState<string>('');
+  const navigate = useNavigate();
 
-  const closeArticle = () => {
-    setArticleId('');
+  const handleGoToArticle = (id: string) => {
+    navigate(`article/${id}`);
   };
 
   return {
     articleId,
     setArticleId,
-    closeArticle
+    handleGoToArticle
   };
 };
 

@@ -8,12 +8,7 @@ import {
   Wrapper
 } from './BlogArticleItem.styled';
 import { AnimatePresence } from 'framer-motion';
-import {
-  expandableContainerVariant,
-  expandableSectionVariants,
-  imageVariant,
-  transition
-} from './animation.variants';
+import { container, image, section } from './animation.variants';
 import { BlogArticleItemProps } from './BlogArticleItem.types';
 import { Tag } from 'components';
 import { formatDate } from 'utils';
@@ -31,37 +26,19 @@ export const BlogArticleItem = ({
   };
 
   return (
-    <Wrapper key={id} onClick={handleExpand}>
+    <Wrapper key={id} isExpand={isExpand} onClick={handleExpand}>
       <AnimatePresence initial={false}>
-        <ExpandableContainer
-          variants={expandableContainerVariant}
-          transition={transition}
-          initial='open'
-          animate={isExpand ? 'close' : 'open'}
-        >
+        <ExpandableContainer {...container(isExpand)}>
           <div>
             <Date>{formatDate(date)}</Date>
             <Title>{title}</Title>
             <Description>{description}</Description>
             <Tag isDark>{tag}</Tag>
           </div>
-          <Image
-            src={thumbnail}
-            initial='open'
-            animate={isExpand ? 'close' : 'open'}
-            variants={imageVariant}
-            transition={transition}
-          />
+          <Image src={thumbnail} {...image(isExpand)} />
         </ExpandableContainer>
-      </AnimatePresence>
-      <AnimatePresence initial={false}>
-        <ExpandableSection
-          variants={expandableSectionVariants}
-          transition={transition}
-          initial='close'
-          animate={isExpand ? 'open' : 'close'}
-        >
-          {children}
+        <ExpandableSection {...section(isExpand)}>
+          {isExpand && children}
         </ExpandableSection>
       </AnimatePresence>
     </Wrapper>

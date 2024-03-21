@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ isExpand: boolean }>`
   min-height: 175px;
   padding: 32px 0px;
   border-bottom: 32px;
@@ -9,6 +9,11 @@ export const Wrapper = styled.div`
   border-left: none;
   border-right: none;
   margin-bottom: 32px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${({ isExpand }) => !isExpand && '#e1e1e1'};
+  }
 `;
 
 export const Date = styled.div`
