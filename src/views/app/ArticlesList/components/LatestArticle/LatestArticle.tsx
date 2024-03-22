@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router-dom';
 import { Tag } from 'components';
+import { useArticle } from 'hooks';
 import { formatDate } from 'utils';
 import {
   Date,
@@ -15,12 +15,12 @@ import { type LatestArticleProps } from './LatestAtricle.types';
 export const LatestArticle = ({ data }: LatestArticleProps): JSX.Element => {
   const { _id: id, date, description, thumbnail, title, tag } = data ?? {};
 
-  const navigate = useNavigate();
+  const { handleGoToArticle } = useArticle(id);
 
   return (
     <ImageWrapper>
       <Image src={thumbnail} />
-      <Overlay onClick={() => navigate(`article/${id}`)}>
+      <Overlay onClick={handleGoToArticle}>
         <OverlayContent>
           <Tag>{tag}</Tag>
           <Date>{date && formatDate(date)}</Date>

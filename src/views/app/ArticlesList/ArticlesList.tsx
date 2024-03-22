@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import { Article } from 'features';
-import { useControlView, useGetArticles } from './ArticleList.hooks';
+import { useGetArticles } from './ArticleList.hooks';
 import { BlogArticlePreview, LatestArticle } from './components';
 
 export const ArticlesList = (): JSX.Element => {
-  const { articleId, setArticleId, handleGoToArticle } = useControlView();
+  const [articleId, setArticleId] = useState<string>('');
   const { firstArticleData, restArticlesData } = useGetArticles();
 
   return (
@@ -13,13 +14,7 @@ export const ArticlesList = (): JSX.Element => {
         data={restArticlesData}
         articleId={articleId}
         setArticleId={setArticleId}
-        article={(id) => (
-          <Article
-            isPreviewMode
-            id={id}
-            onGoToArticle={() => handleGoToArticle(id)}
-          />
-        )}
+        article={(id) => <Article isPreviewMode id={id} />}
       />
     </>
   );

@@ -5,15 +5,10 @@ export const Wrapper = styled.div<{ isExpand: boolean }>`
   min-height: 175px;
   padding: 32px 0px;
   border-bottom: 32px;
-  border: 1px solid #1e1e20;
-  border-left: none;
-  border-right: none;
+  border-top: 1px solid #1e1e20;
+  border-bottom: 1px solid #1e1e20;
   margin-bottom: 32px;
   cursor: pointer;
-
-  &:hover {
-    background-color: ${({ isExpand }) => !isExpand && '#e1e1e1'};
-  }
 `;
 
 export const Date = styled.div`

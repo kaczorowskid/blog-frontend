@@ -1,4 +1,5 @@
 import { MarkdownComponent } from 'components';
+import { useArticle } from 'hooks';
 import { useGetArticle } from './Article.hooks';
 import {
   BlurArticle,
@@ -9,11 +10,8 @@ import {
 } from './Article.styled';
 import { type ArticleProps } from './Article.types';
 
-export const Article = ({
-  id,
-  isPreviewMode,
-  onGoToArticle
-}: ArticleProps): JSX.Element => {
+export const Article = ({ id, isPreviewMode }: ArticleProps): JSX.Element => {
+  const { handleGoToArticle } = useArticle(id);
   const { data } = useGetArticle(id);
 
   return (
@@ -23,8 +21,13 @@ export const Article = ({
         <BlurArticle isPreviewMode={isPreviewMode} />
       </Container>
       <ButtonContainer>
-        {onGoToArticle && (
-          <StyledButton block transparent fontSize={20} onClick={onGoToArticle}>
+        {isPreviewMode && (
+          <StyledButton
+            block
+            transparent
+            fontSize={20}
+            onClick={handleGoToArticle}
+          >
             Go to article
           </StyledButton>
         )}
