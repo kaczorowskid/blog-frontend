@@ -7,12 +7,12 @@ type ButtonProps = {
 };
 
 export const Button = styled.button<ButtonProps>`
-  border: none;
-  height: 48px;
   width: ${({ block }) => (block ? '100%' : 'auto')};
+  height: 48px;
+  font-size: ${({ fontSize }) => `${fontSize}px` || 'inital'};
+  color: ${({ transparent }) => (transparent ? '#010104' : '#eff0f3')};
+  cursor: pointer;
   background-color: ${({ transparent }) =>
     transparent ? 'transparent' : '#010104'};
-  color: ${({ transparent }) => (transparent ? '#010104' : '#eff0f3')};
-  font-size: ${({ fontSize }) => `${fontSize}px` || 'inital'};
-  cursor: pointer;
+  border: none;
 `;

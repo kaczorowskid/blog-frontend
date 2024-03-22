@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const ImageWrapper = styled.div`
   position: relative;
+  height: 700px;
   margin: 20px 0 60px 0;
   overflow: hidden;
-  height: 700px;
 `;
 
 export const Image = styled.img`
@@ -16,10 +16,6 @@ export const Overlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
 
   display: grid;
   grid-template-areas:
@@ -28,7 +24,11 @@ export const Overlay = styled.div`
 
   grid-template-rows: 350px auto;
   grid-template-columns: auto 400px;
+  width: 100%;
+  height: 100%;
+  color: white;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
 `;
 
 export const OverlayContent = styled.div`
@@ -41,9 +41,9 @@ export const Date = styled.span`
 `;
 
 export const Title = styled.h3`
+  margin: 10px 0;
   font-size: 2.7rem;
   font-weight: 400;
-  margin: 10px 0;
 `;
 
 export const Description = styled.span``;
