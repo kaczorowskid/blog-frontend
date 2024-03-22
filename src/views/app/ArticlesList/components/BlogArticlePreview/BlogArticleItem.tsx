@@ -7,6 +7,7 @@ import {
   ExpandableContainer,
   ExpandableSection,
   Image,
+  InfoContainer,
   Title,
   Wrapper
 } from './BlogArticleItem.styled';
@@ -26,15 +27,15 @@ export const BlogArticleItem = ({
   };
 
   return (
-    <Wrapper key={id} isExpand={isExpand} onClick={handleExpand}>
+    <Wrapper isExpand={isExpand} onClick={handleExpand}>
       <AnimatePresence initial={false}>
         <ExpandableContainer {...container(isExpand)}>
-          <div>
+          <InfoContainer>
             <Date>{formatDate(date)}</Date>
             <Title>{title}</Title>
             <Description>{description}</Description>
             <Tag isDark>{tag}</Tag>
-          </div>
+          </InfoContainer>
           <Image src={thumbnail} {...image(isExpand)} />
         </ExpandableContainer>
         <ExpandableSection {...section(isExpand)}>

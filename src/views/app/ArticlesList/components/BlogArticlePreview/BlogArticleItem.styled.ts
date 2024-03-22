@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { mediaQuery } from 'styles';
 
 export const Wrapper = styled.div<{ isExpand: boolean }>`
   min-height: 175px;
@@ -9,6 +10,16 @@ export const Wrapper = styled.div<{ isExpand: boolean }>`
   border-top: 1px solid #1e1e20;
   border-bottom: 32px;
   border-bottom: 1px solid #1e1e20;
+`;
+
+export const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ${mediaQuery.tablet} {
+    display: block;
+  }
 `;
 
 export const Date = styled.div`
@@ -27,16 +38,25 @@ export const Description = styled.div`
 `;
 
 export const Image = styled(motion.img)`
-  width: 350px;
+  width: 100%;
   min-height: 240px;
   object-fit: cover;
+
+  ${mediaQuery.tablet} {
+    width: 350px;
+  }
 `;
 
 export const ExpandableContainer = styled(motion.div)`
   display: flex;
+  flex-direction: column-reverse;
   column-gap: 20px;
   align-items: center;
   overflow: hidden;
+
+  ${mediaQuery.tablet} {
+    flex-direction: row;
+  }
 `;
 
 export const ExpandableSection = styled(motion.div)`

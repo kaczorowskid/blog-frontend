@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { mediaQuery } from 'styles';
 
 export const Container = styled.div`
-
   display: flex;
   align-items: center;
   width: 100%;
@@ -12,7 +12,11 @@ export const Container = styled.div`
 
   img {
     height: 100px;
-    margin-left: 40px;
+    margin-left: 20px;
     cursor: pointer;
+
+    ${mediaQuery.tablet} {
+      margin-left: 40px;
+    }
   }
 `;

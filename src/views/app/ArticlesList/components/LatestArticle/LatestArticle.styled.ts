@@ -1,10 +1,15 @@
 import styled from 'styled-components';
+import { mediaQuery } from 'styles';
 
 export const ImageWrapper = styled.div`
   position: relative;
-  height: 700px;
+  height: auto;
   margin: 20px 0 60px 0;
   overflow: hidden;
+
+  ${mediaQuery.tablet} {
+    height: 700px;
+  }
 `;
 
 export const Image = styled.img`
@@ -17,18 +22,25 @@ export const Overlay = styled.div`
   top: 0;
   left: 0;
 
-  display: grid;
-  grid-template-areas:
-    '. .'
-    'info .';
+  display: flex;
+  flex-direction: column;
 
   grid-template-rows: 350px auto;
   grid-template-columns: auto 400px;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   color: white;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.5);
+
+  ${mediaQuery.tablet} {
+    display: grid;
+    grid-template-areas:
+      '. .'
+      'info .';
+  }
 `;
 
 export const OverlayContent = styled.div`
@@ -46,4 +58,10 @@ export const Title = styled.h3`
   font-weight: 400;
 `;
 
-export const Description = styled.span``;
+export const Description = styled.span`
+  display: none;
+
+  ${mediaQuery.tablet} {
+    display: block;
+  }
+`;

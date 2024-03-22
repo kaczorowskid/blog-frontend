@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   position: relative;
+  display: flex;
+  justify-content: center;
 `;
 
 export const Container = styled.div<{ isPreviewMode?: boolean }>`
