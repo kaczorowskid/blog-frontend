@@ -52,7 +52,7 @@ export const Date = styled.span`
   margin-left: 20px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h1`
   margin: 10px 0;
   font-size: 2.7rem;
   font-weight: 400;
