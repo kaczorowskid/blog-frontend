@@ -9,6 +9,7 @@ export const ArticlesList = (): JSX.Element => {
 
   return (
     <>
+      <h1>Welcome to the blog</h1>
       <LatestArticle data={firstArticleData} />
       <BlogArticlePreview
         data={restArticlesData}
