@@ -5,5 +5,6 @@ export type GetArticleResponse = {
   description: string;
   thumbnail: string;
   tag: string;
+  path: string;
   data: string;
 };

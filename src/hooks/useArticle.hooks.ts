@@ -4,11 +4,11 @@ type UseArticle = {
   handleGoToArticle: () => void;
 };
 
-export const useArticle = (id: string): UseArticle => {
+export const useArticle = (path: string): UseArticle => {
   const navigate = useNavigate();
 
   const handleGoToArticle = (): void => {
-    navigate(`article/${id}`);
+    navigate(`article/${path}`);
   };
 
   return {

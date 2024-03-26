@@ -16,7 +16,7 @@ export const BlogArticlePreview = ({
           articleId={articleId}
           setArticleId={setArticleId}
         >
-          {article(item._id)}
+          {article(item.path)}
         </BlogArticleItem>
       ))}
     </>
