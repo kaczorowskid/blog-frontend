@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { mediaQuery } from 'styles';
 
-export const Container = styled.div`
+export const Container = styled.header`
   display: flex;
   align-items: center;
   width: 100%;

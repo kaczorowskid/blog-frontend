@@ -58,7 +58,7 @@ export const Title = styled.h3`
   font-weight: 400;
 `;
 
-export const Description = styled.span`
+export const Description = styled.p`
   display: none;
 
   ${mediaQuery.tablet} {

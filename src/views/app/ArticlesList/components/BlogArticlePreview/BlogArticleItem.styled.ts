@@ -32,7 +32,7 @@ export const Title = styled.h3`
   font-weight: 400;
 `;
 
-export const Description = styled.div`
+export const Description = styled.p`
   margin: 0 0 20px 0;
   color: #797a79;
 `;
