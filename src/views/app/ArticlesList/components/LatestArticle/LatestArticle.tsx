@@ -25,7 +25,7 @@ export const LatestArticle = ({ data }: LatestArticleProps): JSX.Element => {
       aria-label='Latest article'
       onKeyDown={onKeyDown}
     >
-      <Image src={thumbnail} />
+      <Image src={thumbnail} alt={thumbnail} />
       <Overlay onClick={handleGoToArticle}>
         <OverlayContent>
           <Tag>{tag}</Tag>

@@ -22,10 +22,10 @@ export const MarkdownComponent = ({
           />
         );
       },
-      img({ src, ...props }) {
+      img({ src, alt, ...props }) {
         return (
           <Zoom>
-            <img width='100%' src={src} {...props} />
+            <img width='100%' src={src} alt={alt} {...props} />
           </Zoom>
         );
       }

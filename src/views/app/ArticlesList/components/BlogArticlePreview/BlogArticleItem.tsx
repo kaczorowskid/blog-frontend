@@ -46,7 +46,7 @@ export const BlogArticleItem = ({
             <Description>{description}</Description>
             <Tag isDark>{tag}</Tag>
           </InfoContainer>
-          <Image src={thumbnail} {...image(isExpand)} />
+          <Image src={thumbnail} alt={thumbnail} {...image(isExpand)} />
         </ExpandableContainer>
         <ExpandableSection {...section(isExpand)}>
           {isExpand && children}

@@ -6,7 +6,7 @@ export const Header = ({ navigateTo, image }: HeaderProps): JSX.Element => {
   return (
     <Container>
       <Link to={navigateTo} aria-label='Logo'>
-        <img src={image} />
+        <img src={image} alt='logo' />
       </Link>
     </Container>
   );
