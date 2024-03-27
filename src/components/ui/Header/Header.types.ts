@@ -1,4 +1,4 @@
 export type HeaderProps = {
-  onClick?: () => void;
+  navigateTo: string;
   image: string;
 };

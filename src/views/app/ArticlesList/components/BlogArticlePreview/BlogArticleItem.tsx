@@ -1,5 +1,6 @@
 import { Tag } from 'components';
 import { AnimatePresence } from 'framer-motion';
+import { useAccessibility } from 'hooks';
 import { formatDate } from 'utils';
 import {
   Date,
@@ -26,8 +27,17 @@ export const BlogArticleItem = ({
     !isExpand && setArticleId(id);
   };
 
+  const { onKeyDown } = useAccessibility(handleExpand);
+
   return (
-    <Wrapper isExpand={isExpand} onClick={handleExpand}>
+    <Wrapper
+      tabIndex={0}
+      role='button'
+      aria-label='Article item'
+      isExpand={isExpand}
+      onKeyDown={onKeyDown}
+      onClick={handleExpand}
+    >
       <AnimatePresence initial={false}>
         <ExpandableContainer {...container(isExpand)}>
           <InfoContainer>

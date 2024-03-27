@@ -1,5 +1,5 @@
 import { Tag } from 'components';
-import { useArticle } from 'hooks';
+import { useAccessibility, useArticle } from 'hooks';
 import { formatDate } from 'utils';
 import {
   Date,
@@ -16,9 +16,15 @@ export const LatestArticle = ({ data }: LatestArticleProps): JSX.Element => {
   const { _id: id, date, description, thumbnail, title, tag } = data ?? {};
 
   const { handleGoToArticle } = useArticle(id);
+  const { onKeyDown } = useAccessibility(handleGoToArticle);
 
   return (
-    <ImageWrapper>
+    <ImageWrapper
+      tabIndex={0}
+      role='button'
+      aria-label='Latest article'
+      onKeyDown={onKeyDown}
+    >
       <Image src={thumbnail} />
       <Overlay onClick={handleGoToArticle}>
         <OverlayContent>
