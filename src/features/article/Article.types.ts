@@ -1,5 +1,5 @@
 export type ArticleProps = {
-  id: string;
+  path: string;
   isPreviewMode?: boolean;
   onGoToArticle?: () => void;
 };

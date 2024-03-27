@@ -1,4 +1,4 @@
 export const routesUrls = {
   base: '/',
-  article: '/article/:id'
+  article: '/article/:path'
 };

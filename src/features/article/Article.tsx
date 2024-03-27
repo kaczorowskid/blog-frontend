@@ -10,9 +10,9 @@ import {
 } from './Article.styled';
 import { type ArticleProps } from './Article.types';
 
-export const Article = ({ id, isPreviewMode }: ArticleProps): JSX.Element => {
-  const { handleGoToArticle } = useArticle(id);
-  const { data } = useGetArticle(id);
+export const Article = ({ path, isPreviewMode }: ArticleProps): JSX.Element => {
+  const { handleGoToArticle } = useArticle(path);
+  const { data } = useGetArticle(path);
 
   return (
     <Wrapper>

@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Article } from 'features';
 
 export const ArticlePreview = (): JSX.Element => {
-  const { id } = useParams<{ id: string }>();
+  const { path } = useParams<{ path: string }>();
 
-  return <Article id={id as string} />;
+  return <Article path={path as string} />;
 };
