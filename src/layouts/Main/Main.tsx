@@ -1,5 +1,5 @@
 import { Outlet, useNavigate } from 'react-router-dom';
-import logo from 'assets/logo.svg';
+import logo from 'assets/logo1.svg';
 import { Footer, Header, ScrollToTop } from 'components';
 import { routesUrls } from 'routes';
 import { Conatiner } from './Main.styled';

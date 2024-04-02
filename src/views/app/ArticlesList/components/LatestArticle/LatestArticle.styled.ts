@@ -52,13 +52,13 @@ export const Date = styled.span`
   margin-left: 20px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h2`
   margin: 10px 0;
   font-size: 2.7rem;
   font-weight: 400;
 `;
 
-export const Description = styled.span`
+export const Description = styled.p`
   display: none;
 
   ${mediaQuery.tablet} {

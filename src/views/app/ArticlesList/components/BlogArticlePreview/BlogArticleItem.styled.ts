@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { mediaQuery } from 'styles';
 
-export const Wrapper = styled.div<{ isExpand: boolean }>`
+export const Wrapper = styled.section<{ isExpand: boolean }>`
   min-height: 175px;
   padding: 32px 0px;
   margin-bottom: 32px;
@@ -26,13 +26,13 @@ export const Date = styled.div`
   color: #797a79;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h2`
   margin: 10px 0;
   font-size: 1.9rem;
   font-weight: 400;
 `;
 
-export const Description = styled.div`
+export const Description = styled.p`
   margin: 0 0 20px 0;
   color: #797a79;
 `;

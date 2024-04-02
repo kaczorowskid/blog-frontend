@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   justify-content: center;
 `;
 
-export const Container = styled.div<{ isPreviewMode?: boolean }>`
+export const Container = styled.article<{ isPreviewMode?: boolean }>`
   position: relative;
   height: ${({ isPreviewMode }) => (isPreviewMode ? '1300px' : 'auto')};
   overflow: hidden;
