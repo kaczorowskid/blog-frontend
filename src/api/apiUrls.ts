@@ -7,7 +7,7 @@ const base = {
 export const apiUrls = {
   article: {
     getArticles: `${base.article}`,
-    getArticle: (id: string) =>
-      `${base.article}/${generatePath('/id/:id', { id })}`
+    getArticle: (path: string) =>
+      `${base.article}/${generatePath('/path/:path', { path })}`
   }
 };
