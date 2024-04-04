@@ -11,12 +11,12 @@ export const BlogArticlePreview = ({
     <>
       {data?.map((item) => (
         <BlogArticleItem
-          key={item._id}
+          key={item.path}
           item={item}
           articleId={articleId}
           setArticleId={setArticleId}
         >
-          {article(item._id)}
+          {article(item.path)}
         </BlogArticleItem>
       ))}
     </>

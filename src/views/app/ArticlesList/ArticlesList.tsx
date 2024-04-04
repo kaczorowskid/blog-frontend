@@ -14,7 +14,7 @@ export const ArticlesList = (): JSX.Element => {
         data={restArticlesData}
         articleId={articleId}
         setArticleId={setArticleId}
-        article={(id) => <Article isPreviewMode id={id} />}
+        article={(path) => <Article isPreviewMode path={path} />}
       />
     </>
   );

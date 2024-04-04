@@ -13,9 +13,9 @@ import {
 import { type LatestArticleProps } from './LatestAtricle.types';
 
 export const LatestArticle = ({ data }: LatestArticleProps): JSX.Element => {
-  const { _id: id, date, description, thumbnail, title, tag } = data ?? {};
+  const { date, description, thumbnail, path, title, tag } = data ?? {};
 
-  const { handleGoToArticle } = useArticle(id);
+  const { handleGoToArticle } = useArticle(path);
 
   return (
     <ImageWrapper>
