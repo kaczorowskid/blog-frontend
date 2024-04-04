@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.header`
@@ -19,4 +20,15 @@ export const Container = styled.header`
     margin-left: 10px;
     cursor: pointer;
   }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

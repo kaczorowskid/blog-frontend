@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { mediaQuery } from 'styles';
 
-export const Wrapper = styled.section<{ isExpand: boolean }>`
+export const Container = styled.div<{ isExpand: boolean }>`
   min-height: 175px;
   padding: 32px 0px;
   margin-bottom: 32px;
@@ -23,7 +23,7 @@ export const InfoContainer = styled.div`
 `;
 
 export const Date = styled.div`
-  color: #797a79;
+  color: rgb(101 101 101);
 `;
 
 export const Title = styled.h2`
@@ -34,7 +34,7 @@ export const Title = styled.h2`
 
 export const Description = styled.p`
   margin: 0 0 20px 0;
-  color: #797a79;
+  color: rgb(101 101 101);
 `;
 
 export const Image = styled(motion.img)`
