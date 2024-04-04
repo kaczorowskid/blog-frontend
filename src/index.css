@@ -19,3 +19,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+[role="button"]:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: blue solid 2px;
+}
