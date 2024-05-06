@@ -1,6 +1,6 @@
 ## BLOG FRONTEND
 
-Simple blog application to demonstrate SEO basics in react
+Simple blog application to demonstrate SEO basics in react <br />
 Link to article: https://codetain.com/blog/seo-basics-in-react/
 
 ## Stack
